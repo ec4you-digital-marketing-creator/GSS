@@ -1,0 +1,287 @@
+{% load static %}
+
+<style>
+    #gss-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        padding: 14px 0;
+        background: rgba(0, 0, 0, 0.88);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    #gss-header .nav-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #gss-header .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+    }
+
+    #gss-header .nav-logo-icon {
+        width: 42px;
+        height: 42px;
+        background: #FF5500;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        font-size: 16px;
+    }
+
+    #gss-header .nav-logo-text {
+        color: #fff;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 22px;
+        letter-spacing: 1.5px;
+    }
+
+    #gss-header .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #gss-header .nav-links a {
+        color: #888;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-family: 'Manrope', sans-serif;
+    }
+
+    #gss-header .nav-links a:hover {
+        color: #ffffff;
+    }
+
+    /* Mobile Toggle Removed in favor of Bottom Nav */
+    .mobile-toggle {
+        display: none;
+    }
+
+    /* Bottom Navigation Bar (Mobile Only) - Refined */
+    .mobile-bottom-nav {
+        display: none;
+        position: fixed !important;
+        bottom: 16px !important;
+        top: auto !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 96% !important;
+        max-width: 450px !important;
+        height: 62px !important;
+        background: rgba(13, 13, 13, 0.94) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 18px !important;
+        z-index: 999999 !important;
+        padding: 0 !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7) !important;
+        overflow: hidden !important;
+    }
+
+    .mobile-bottom-nav ul {
+        display: flex !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .mobile-bottom-nav li {
+        flex: 1 !important;
+        height: 100% !important;
+    }
+
+    .mobile-bottom-nav a {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px !important;
+        text-decoration: none !important;
+        color: rgba(255, 255, 255, 0.4) !important;
+        transition: all 0.2s ease !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .mobile-bottom-nav a i {
+        font-size: 18px !important;
+    }
+
+    .mobile-bottom-nav a span {
+        font-size: 9px !important;
+        font-weight: 700 !important;
+        font-family: 'Manrope', sans-serif !important;
+        letter-spacing: 0.2px !important;
+    }
+
+    .mobile-bottom-nav li.active a {
+        color: #FF5500 !important;
+    }
+
+    .mobile-bottom-nav li.active a i {
+        filter: drop-shadow(0 0 5px rgba(255, 85, 0, 0.3)) !important;
+    }
+
+    /* Mobile Top Header - Refined */
+    .mobile-top-header {
+        display: none;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: rgba(0, 0, 0, 0.92) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        padding: 10px 16px !important;
+        z-index: 999998 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        box-sizing: border-box !important;
+    }
+
+    .mobile-top-header .inner {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .mobile-btn-contact {
+        background: #FF5500 !important;
+        color: #000 !important;
+        padding: 6px 14px !important;
+        border-radius: 50px !important;
+        font-family: 'Bebas Neue', sans-serif !important;
+        font-size: 13px !important;
+        letter-spacing: 0.8px !important;
+        text-decoration: none !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        transition: all 0.2s ease !important;
+        box-shadow: 0 4px 15px rgba(255, 85, 0, 0.3) !important;
+    }
+
+    @media (max-width: 991px) {
+        #gss-header {
+            display: none !important;
+        }
+
+        .mobile-bottom-nav,
+        .mobile-top-header {
+            display: block !important;
+        }
+
+        /* Fix horizontal scroll and set layout spacing */
+        body {
+            padding-top: 65px !important;
+            padding-bottom: 100px !important;
+            overflow-x: hidden !important;
+            width: 100% !important;
+            position: relative !important;
+        }
+
+        /* Ensure all content stays within viewport */
+        * {
+            box-sizing: border-box !important;
+        }
+    }
+</style>
+
+<!-- Desktop Header -->
+<header id="gss-header">
+    <div class="nav-inner">
+        <!-- Logo -->
+        <a href="{% url 'home' %}" class="nav-logo">
+            <div class="nav-logo-icon"><i class="fas fa-bolt"></i></div>
+            <span class="nav-logo-text">GSS Group</span>
+        </a>
+
+        <!-- Nav Links (right side) -->
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'contact_page' %}">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Mobile Top Header -->
+<div class="mobile-top-header">
+    <div class="inner">
+        <a href="{% url 'home' %}" class="nav-logo">
+            <div class="nav-logo-icon" style="width: 32px; height: 32px; font-size: 12px;"><i class="fas fa-bolt"></i>
+            </div>
+            <span class="nav-logo-text" style="font-size: 18px;">GSS Group</span>
+        </a>
+        <a href="tel:+1234567890" class="mobile-btn-contact">
+            <i class="fas fa-phone-alt"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+</div>
+
+<!-- Mobile Bottom Navigation -->
+<nav class="mobile-bottom-nav">
+    <ul>
+        <li class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+            <a href="{% url 'home' %}">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+        </li>
+        <li class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+            <a href="{% url 'about' %}">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </a>
+        </li>
+        <li class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">
+            <a href="{% url 'services' %}">
+                <i class="fas fa-cogs"></i>
+                <span>Service</span>
+            </a>
+        </li>
+        <li class="{% if request.resolver_match.url_name == 'blog' %}active{% endif %}">
+            <a href="{% url 'blog' %}">
+                <i class="fas fa-file-alt"></i>
+                <span>Strategy</span>
+            </a>
+        </li>
+        <li class="{% if request.resolver_match.url_name == 'contact_page' %}active{% endif %}">
+            <a href="{% url 'contact_page' %}">
+                <i class="fas fa-phone-alt"></i>
+                <span>Contact</span>
+            </a>
+        </li>
+    </ul>
+</nav>

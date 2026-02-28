@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+
+{% block title %}Latest News & Articles - GSS CAR Makeovers{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1493238792015-fa094a3278dd?q=80&w=1920&auto=format&fit=crop"
+            alt="Car Detail" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/90 via-dark/80 to-dark"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="container mx-auto px-4 lg:px-8 z-10 text-center">
+        <h1 class="text-5xl md:text-7xl font-black italic mb-6 leading-tight">
+            Latest <span class="text-primary">Insights</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Stay updated with the latest trends, tips, and news from the world of automotive makeovers.
+        </p>
+    </div>
+</section>
+
+<!-- Blog Grid Section -->
+<section class="py-20 bg-dark">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Blog Post 1 -->
+            <article
+                class="bg-grey/50 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 border border-grey/30 hover:border-primary/50">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=800&auto=format&fit=crop"
+                        alt="Ceramic Coating Guide"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Guide
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center text-gray-400 text-sm mb-4">
+                        <i class="far fa-calendar-alt mr-2"></i>
+                        <span>October 15, 2025</span>
+                        <span class="mx-2">•</span>
+                        <i class="far fa-clock mr-2"></i>
+                        <span>5 min read</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-black italic mb-4 group-hover:text-primary transition-colors duration-300">
+                        The Ultimate Guide to Ceramic Coating
+                    </h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed line-clamp-3">
+                        Discover why ceramic coating is the best investment for your vehicle's paint protection. We
+                        break down the benefits, process, and maintenance tips.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-primary font-semibold hover:text-white transition-colors duration-300">
+                        Read Article <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article
+                class="bg-grey/50 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 border border-grey/30 hover:border-primary/50">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=800&auto=format&fit=crop"
+                        alt="Car Wrapping Trends"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Trends
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center text-gray-400 text-sm mb-4">
+                        <i class="far fa-calendar-alt mr-2"></i>
+                        <span>November 2, 2025</span>
+                        <span class="mx-2">•</span>
+                        <i class="far fa-clock mr-2"></i>
+                        <span>4 min read</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-black italic mb-4 group-hover:text-primary transition-colors duration-300">
+                        Top Car Wrap Trends for 2026
+                    </h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed line-clamp-3">
+                        From matte finishes to color-shifting films, explore the hottest trends in vehicle wrapping that
+                        are taking the automotive world by storm.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-primary font-semibold hover:text-white transition-colors duration-300">
+                        Read Article <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article
+                class="bg-grey/50 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 border border-grey/30 hover:border-primary/50">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?q=80&w=800&auto=format&fit=crop"
+                        alt="Interior Detailing"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Tips
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center text-gray-400 text-sm mb-4">
+                        <i class="far fa-calendar-alt mr-2"></i>
+                        <span>November 20, 2025</span>
+                        <span class="mx-2">•</span>
+                        <i class="far fa-clock mr-2"></i>
+                        <span>6 min read</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-black italic mb-4 group-hover:text-primary transition-colors duration-300">
+                        Interior Detailing Secrets Revealed
+                    </h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed line-clamp-3">
+                        Learn how to keep your car's interior looking showroom fresh with these professional detailing
+                        secrets and maintenance hacks.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-primary font-semibold hover:text-white transition-colors duration-300">
+                        Read Article <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 -->
+            <article
+                class="bg-grey/50 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 border border-grey/30 hover:border-primary/50">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1618360641151-54c7d75a18a5?q=80&w=800&auto=format&fit=crop"
+                        alt="Paint Protection Film"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Protection
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center text-gray-400 text-sm mb-4">
+                        <i class="far fa-calendar-alt mr-2"></i>
+                        <span>December 5, 2025</span>
+                        <span class="mx-2">•</span>
+                        <i class="far fa-clock mr-2"></i>
+                        <span>7 min read</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-black italic mb-4 group-hover:text-primary transition-colors duration-300">
+                        Is PPF Worth the Investment?
+                    </h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed line-clamp-3">
+                        A comprehensive look at Paint Protection Film (PPF), its costs, benefits, and why it might be
+                        the best decision for your new car.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-primary font-semibold hover:text-white transition-colors duration-300">
+                        Read Article <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 5 -->
+            <article
+                class="bg-grey/50 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 border border-grey/30 hover:border-primary/50">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1533558701576-23c65e0272fb?q=80&w=800&auto=format&fit=crop"
+                        alt="Maintenance Tips"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Maintenance
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center text-gray-400 text-sm mb-4">
+                        <i class="far fa-calendar-alt mr-2"></i>
+                        <span>December 12, 2025</span>
+                        <span class="mx-2">•</span>
+                        <i class="far fa-clock mr-2"></i>
+                        <span>3 min read</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-black italic mb-4 group-hover:text-primary transition-colors duration-300">
+                        Winter Car Care Essentials
+                    </h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed line-clamp-3">
+                        Prepare your vehicle for the harsh winter months with our essential maintenance checklist. Don't
+                        get caught out in the cold!
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-primary font-semibold hover:text-white transition-colors duration-300">
+                        Read Article <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 6 -->
+            <article
+                class="bg-grey/50 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 border border-grey/30 hover:border-primary/50">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=800&auto=format&fit=crop"
+                        alt="Customization"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Custom
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center text-gray-400 text-sm mb-4">
+                        <i class="far fa-calendar-alt mr-2"></i>
+                        <span>January 5, 2026</span>
+                        <span class="mx-2">•</span>
+                        <i class="far fa-clock mr-2"></i>
+                        <span>5 min read</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-black italic mb-4 group-hover:text-primary transition-colors duration-300">
+                        Personalizing Your Ride
+                    </h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed line-clamp-3">
+                        Explore the art of car customization. From subtle touches to bold statements, find out how to
+                        make your car truly yours.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-primary font-semibold hover:text-white transition-colors duration-300">
+                        Read Article <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Pagination (Static for now) -->
+        <div class="flex justify-center mt-16">
+            <nav class="flex space-x-2">
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-grey/50 text-gray-400 hover:bg-grey hover:text-white transition-colors duration-300">2</a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-grey/50 text-gray-400 hover:bg-grey hover:text-white transition-colors duration-300">3</a>
+                <span class="w-10 h-10 flex items-center justify-center text-gray-600">...</span>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-grey/50 text-gray-400 hover:bg-grey hover:text-white transition-colors duration-300"><i
+                        class="fas fa-chevron-right"></i></a>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter CTA -->
+<section class="py-20 bg-grey/30">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div
+            class="bg-gradient-to-r from-primary/20 to-dark p-12 md:p-16 rounded-2xl border border-primary/30 relative overflow-hidden">
+            <div class="absolute -right-20 -top-20 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
+
+            <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-black italic mb-4">
+                        Subscribe to Our <span class="text-primary">Newsletter</span>
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        Get the latest updates, exclusive offers, and car care tips delivered straight to your inbox.
+                    </p>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <form class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" placeholder="Enter your email address"
+                            class="flex-1 bg-dark/50 border border-grey/50 rounded-lg px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors duration-300">
+                        <button type="button"
+                            class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
