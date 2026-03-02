@@ -10,7 +10,8 @@
   <!-- Background Image Base -->
   <div class="absolute inset-0 z-0">
     <img src="{% static 'images/hero_ppf_application.png' %}" alt="Hero Background"
-      class="w-full h-full object-cover opacity-20" style="object-position: left; ">
+      class="w-full h-full object-cover opacity-20" style="object-position: left;" fetchpriority="high" width="1280"
+      height="720">
     <!-- <div class="absolute inset-0 bg-black-900/60"></div> -->
   </div>
 
@@ -50,7 +51,7 @@
       <div class="relative hidden lg:flex justify-center lg:justify-end">
         <div class="relative z-10 rounded-3xl overflow-hidden border-4 border-black/40 shadow-2xl max-w-xl">
           <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=2000&auto=format&fit=crop"
-            alt="Premium Car" class="w-full h-auto">
+            alt="Premium Car" class="w-full h-auto" loading="lazy" width="800" height="600">
         </div>
       </div>
     </div>
@@ -314,7 +315,6 @@
     </div>
   </div>
 </section>
-</section>
 
 <!-- Gallery / Projects Section -->
 <section id="gallery-section" style="background:#000;padding:100px 0 60px;">
@@ -346,25 +346,29 @@
       <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;">
         <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=800&auto=format&fit=crop"
           alt="Lamborghini Huracan" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;"
-          onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+          loading="lazy" width="800" height="600" onmouseover="this.style.transform='scale(1.06)'"
+          onmouseout="this.style.transform='scale(1)'">
       </div>
 
       <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;">
         <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop"
           alt="Mercedes G-Wagon" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;"
-          onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+          loading="lazy" width="800" height="600" onmouseover="this.style.transform='scale(1.06)'"
+          onmouseout="this.style.transform='scale(1)'">
       </div>
 
       <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;">
         <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=800&auto=format&fit=crop"
           alt="Porsche 911 GT3" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;"
-          onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+          loading="lazy" width="800" height="600" onmouseover="this.style.transform='scale(1.06)'"
+          onmouseout="this.style.transform='scale(1)'">
       </div>
 
       <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;">
         <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop"
-          alt="Ferrari" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;"
-          onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+          alt="Ferrari" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;" loading="lazy"
+          width="800" height="600" onmouseover="this.style.transform='scale(1.06)'"
+          onmouseout="this.style.transform='scale(1)'">
       </div>
 
     </div>
@@ -412,7 +416,8 @@
               piece of art. Absolutely worth every penny."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=12" alt="Julian Sterling"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
+                height="52">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -440,7 +445,8 @@
               different vehicle types in record time."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=47" alt="Sarah Chen"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
+                height="52">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -467,7 +473,8 @@
               conditions. Top-tier engineering."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=33" alt="Marco Rossi"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
+                height="52">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -494,7 +501,8 @@
               challenging road conditions."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=65" alt="Elena Visser"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
+                height="52">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -521,7 +529,8 @@
               Highly professional and skilled team."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=44" alt="Sophia Laurent"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
+                height="52">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -548,7 +557,8 @@
               GT is simply flawless."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=11" alt="David Miller"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
+                height="52">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -668,7 +678,8 @@
             Tips</span>
           <img src="https://images.unsplash.com/photo-1598084991519-c90d6350e933?q=80&w=800&auto=format&fit=crop"
             alt="Ceramic Coating" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
-            onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            loading="lazy" width="800" height="500" onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'">
         </div>
         <div style="padding:24px 24px 28px;">
           <div
@@ -693,7 +704,8 @@
             style="position:absolute;top:14px;left:14px;z-index:2;background:rgba(0,0,0,0.7);color:#fff;font-family:'Manrope',sans-serif;font-size:11px;font-weight:600;padding:4px 12px;border-radius:999px;letter-spacing:1px;">Trends</span>
           <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop"
             alt="Vinyl Wrap Trends" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
-            onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            loading="lazy" width="800" height="500" onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'">
         </div>
         <div style="padding:24px 24px 28px;">
           <div
@@ -718,7 +730,8 @@
             style="position:absolute;top:14px;left:14px;z-index:2;background:rgba(0,0,0,0.7);color:#fff;font-family:'Manrope',sans-serif;font-size:11px;font-weight:600;padding:4px 12px;border-radius:999px;letter-spacing:1px;">Guides</span>
           <img src="https://images.unsplash.com/photo-1621259182978-f09e5e2ca845?q=80&w=800&auto=format&fit=crop"
             alt="Custom Interior" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
-            onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            loading="lazy" width="800" height="500" onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'">
         </div>
         <div style="padding:24px 24px 28px;">
           <div

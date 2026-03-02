@@ -7,17 +7,16 @@
 <!-- Page Hero -->
 <section class="relative h-96 flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1920&auto=format&fit=crop" 
-             alt="Gallery" 
-             class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-dark/80"></div>
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1920&auto=format&fit=crop"
+            alt="Gallery" class="w-full h-full object-cover" fetchpriority="high" width="1920" height="400">
+        <div class="absolute inset-0 bg-dark/80" style="background: rgba(0,0,0,0.8);"></div>
     </div>
-    
+
     <div class="container mx-auto px-4 lg:px-8 z-10 text-center">
         <h1 class="text-5xl md:text-6xl font-black italic mb-4">
             Our <span class="text-primary">Portfolio</span>
         </h1>
-        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto" style="color: #d1d5db;">
             Explore our latest transformations and see the quality of our work
         </p>
     </div>
@@ -27,19 +26,29 @@
 <section class="py-12 bg-grey/30 sticky top-20 z-40 border-b border-grey/30">
     <div class="container mx-auto px-4 lg:px-8">
         <div class="flex flex-wrap justify-center gap-4">
-            <button class="filter-btn active px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-primary text-white" data-filter="all">
+            <button
+                class="filter-btn active px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-primary text-white"
+                data-filter="all">
                 All Projects
             </button>
-            <button class="filter-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-grey/50 hover:bg-grey text-white" data-filter="ceramic">
+            <button
+                class="filter-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-grey/50 hover:bg-grey text-white"
+                data-filter="ceramic">
                 Ceramic Coating
             </button>
-            <button class="filter-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-grey/50 hover:bg-grey text-white" data-filter="wraps">
+            <button
+                class="filter-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-grey/50 hover:bg-grey text-white"
+                data-filter="wraps">
                 Wraps
             </button>
-            <button class="filter-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-grey/50 hover:bg-grey text-white" data-filter="interior">
+            <button
+                class="filter-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-grey/50 hover:bg-grey text-white"
+                data-filter="interior">
                 Interior
             </button>
-            <button class="filter-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-grey/50 hover:bg-grey text-white" data-filter="detailing">
+            <button
+                class="filter-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-grey/50 hover:bg-grey text-white"
+                data-filter="detailing">
                 Detailing
             </button>
         </div>
@@ -50,124 +59,151 @@
 <section class="py-20 bg-dark">
     <div class="container mx-auto px-4 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
-            
+
             <!-- Gallery Item 1 -->
-            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-category="ceramic">
-                <img src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&dpr=1" 
-                     alt="Ceramic Coating" 
-                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-category="ceramic">
+                <img src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&dpr=1"
+                    alt="Ceramic Coating"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy" width="800" height="800">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div>
                         <h3 class="text-xl font-black italic mb-2">Ceramic Coating</h3>
                         <p class="text-gray-300">Lamborghini Huracán</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Gallery Item 2 -->
-            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-category="wraps">
-                <img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=800&auto=format&fit=crop" 
-                     alt="Custom Wrap" 
-                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-category="wraps">
+                <img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=800&auto=format&fit=crop"
+                    alt="Custom Wrap"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy" width="800" height="800">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div>
                         <h3 class="text-xl font-black italic mb-2">Matte Black Wrap</h3>
                         <p class="text-gray-300">BMW M4</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Gallery Item 3 -->
-            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-category="interior">
-                <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=800&auto=format&fit=crop" 
-                     alt="Interior" 
-                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-category="interior">
+                <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=800&auto=format&fit=crop"
+                    alt="Interior"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy" width="800" height="800">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div>
                         <h3 class="text-xl font-black italic mb-2">Interior Upgrade</h3>
                         <p class="text-gray-300">Mercedes-Benz S-Class</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Gallery Item 4 -->
-            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-category="ceramic">
-                <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&dpr=1" 
-                     alt="PPF" 
-                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-category="ceramic">
+                <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&dpr=1"
+                    alt="PPF"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy" width="800" height="800">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div>
                         <h3 class="text-xl font-black italic mb-2">PPF Installation</h3>
                         <p class="text-gray-300">Porsche 911</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Gallery Item 5 -->
-            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-category="detailing">
-                <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop" 
-                     alt="Detailing" 
-                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-category="detailing">
+                <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop"
+                    alt="Detailing"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy" width="800" height="800">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div>
                         <h3 class="text-xl font-black italic mb-2">Full Detailing</h3>
                         <p class="text-gray-300">Tesla Model S</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Gallery Item 6 -->
-            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-category="wraps">
-                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop" 
-                     alt="Chrome Wrap" 
-                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-category="wraps">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop"
+                    alt="Chrome Wrap"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy" width="800" height="800">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div>
                         <h3 class="text-xl font-black italic mb-2">Chrome Wrap</h3>
                         <p class="text-gray-300">Ferrari 488</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Gallery Item 7 -->
-            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-category="ceramic">
-                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop" 
-                     alt="Ceramic" 
-                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-category="ceramic">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop"
+                    alt="Ceramic"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy" width="800" height="800">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div>
                         <h3 class="text-xl font-black italic mb-2">Ceramic Protection</h3>
                         <p class="text-gray-300">Audi R8</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Gallery Item 8 -->
-            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-category="interior">
-                <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=800&auto=format&fit=crop" 
-                     alt="Interior" 
-                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-category="interior">
+                <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=800&auto=format&fit=crop"
+                    alt="Interior"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy" width="800" height="800">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div>
                         <h3 class="text-xl font-black italic mb-2">Custom Interior</h3>
                         <p class="text-gray-300">Range Rover</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Gallery Item 9 -->
-            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-category="detailing">
-                <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=800&auto=format&fit=crop" 
-                     alt="Paint Correction" 
-                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="gallery-item group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-category="detailing">
+                <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=800&auto=format&fit=crop"
+                    alt="Paint Correction"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy" width="800" height="800">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div>
                         <h3 class="text-xl font-black italic mb-2">Paint Correction</h3>
                         <p class="text-gray-300">McLaren 720S</p>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>
@@ -179,11 +215,11 @@
     // Gallery Filtering
     const filterBtns = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
-    
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const filter = btn.getAttribute('data-filter');
-            
+
             // Update active button
             filterBtns.forEach(b => {
                 b.classList.remove('active', 'bg-primary');
@@ -191,7 +227,7 @@
             });
             btn.classList.add('active', 'bg-primary');
             btn.classList.remove('bg-grey/50');
-            
+
             // Filter gallery items
             galleryItems.forEach(item => {
                 if (filter === 'all' || item.getAttribute('data-category') === filter) {
@@ -210,7 +246,7 @@
             });
         });
     });
-    
+
     // Add transition styles
     galleryItems.forEach(item => {
         item.style.transition = 'opacity 0.3s, transform 0.3s';

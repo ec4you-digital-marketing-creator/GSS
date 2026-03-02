@@ -6,56 +6,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}GSS CAR Makeovers - Premium Automotive Services{% endblock %}</title>
+    <meta name="description"
+        content="{% block meta_description %}GSS CAR Makeovers offers premium automotive services including ceramic coating, PPF, custom wraps, and interior upgrades.{% endblock %}">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DNS Prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
-    <!-- Custom Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#FF5500',
-                        'primary-hover': '#E64A19',
-                        dark: '#000000',
-                        'bg-card': '#141414',
-                        'text-dim': '#A0A0A0',
-                    },
-                    fontFamily: {
-                        heading: ['Bebas Neue', 'sans-serif'],
-                        body: ['Manrope', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Google Fonts -->
+    <!-- Google Fonts: preconnect + async load -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap">
+    </noscript>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome: non-blocking load -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper CSS: non-blocking load -->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    </noscript>
 
-    <!-- Custom CSS -->
+    <!-- Custom CSS (local – always render-blocking, kept minimal) -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+    <!-- Critical inline styles (fonts fallback while loading) -->
     <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box
+        }
+
         body {
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Manrope', system-ui, sans-serif;
             background-color: #000000;
             color: #FFFFFF;
+            margin: 0;
         }
 
         .font-heading {
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Bebas Neue', system-ui, sans-serif;
         }
     </style>
 
@@ -72,20 +76,22 @@
 
     <!-- Footer -->
     {% include 'components/footer.html' %}
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Swiper JS: deferred -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <!-- Inline scroll effect (lightweight, no external deps) -->
     <script>
         // Header scroll effect
         window.addEventListener('scroll', () => {
-            const header = document.getElementById('main-header');
+            const header = document.getElementById('gss-header');
+            if (!header) return;
             if (window.scrollY > 50) {
-                header.classList.add('bg-black/90', 'backdrop-blur-xl', 'py-4');
-                header.classList.remove('py-6');
+                header.style.background = 'rgba(0,0,0,0.97)';
             } else {
-                header.classList.remove('bg-black/90', 'backdrop-blur-xl', 'py-4');
-                header.classList.add('py-6');
+                header.style.background = 'rgba(0,0,0,0.88)';
             }
-        });
+        }, { passive: true });
     </script>
 
     {% block extra_js %}{% endblock %}
