@@ -5,24 +5,25 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
             <!-- Column 1: Brand -->
             <div class="space-y-6">
-                <div style="display:flex;align-items:center;gap:12px;">
-                    <div
-                        style="width:32px;height:32px;background:#FF5500;border-radius:6px;display:flex;align-items:center;justify-content:center;">
-                        <img src="{% static 'images/logo_icon.png' %}" alt=""
-                            style="width:20px;height:20px;filter:brightness(0) invert(1);">
-                    </div>
-                    <span style="font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:1px;color:#222;">GSS
-                        Group</span>
+                <div style="display:flex;align-items:center;">
+                    <a href="{% url 'home' %}" style="display:block; height:60px;" aria-label="GSS Group Home">
+                        <img src="{% static 'images/logo.png' %}" alt="GSS Group Logo"
+                            style="height:100%; width:auto; object-fit:contain;" width="180" height="60">
+                    </a>
                 </div>
                 <p style="color:#666;font-size:14px;line-height:1.6;max-width:280px;font-family:'Manrope',sans-serif;">
                     Building the future of digital experiences with precision, creativity, and unparalleled
                     performance across all platforms.
                 </p>
                 <div class="flex space-x-6 pt-2">
-                    <a href="#" style="color:#222;font-size:18px;"><i class="fab fa-twitter"></i></a>
-                    <a href="#" style="color:#222;font-size:18px;"><i class="fab fa-instagram"></i></a>
-                    <a href="#" style="color:#222;font-size:18px;"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" style="color:#222;font-size:18px;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="color:#222;font-size:18px;" aria-label="Follow us on Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="#" style="color:#222;font-size:18px;" aria-label="Follow us on Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" style="color:#222;font-size:18px;" aria-label="Follow us on LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="#" style="color:#222;font-size:18px;" aria-label="Follow us on Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
 

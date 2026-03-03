@@ -6,12 +6,12 @@
 {% block content %}
 
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-32 lg:pt-40 overflow-hidden bg-black">
+<section class="relative min-h-screen min-h-[100dvh] flex items-center pt-32 lg:pt-40 overflow-hidden bg-black">
   <!-- Background Image Base -->
   <div class="absolute inset-0 z-0">
     <img src="{% static 'images/hero_ppf_application.png' %}" alt="Hero Background"
-      class="w-full h-full object-cover opacity-20" style="object-position: left;" fetchpriority="high" width="1280"
-      height="720">
+      class="w-full h-full object-cover opacity-20 hero-bg-img" style="object-position: left;" width="1920"
+      height="1080" fetchpriority="high">
     <!-- <div class="absolute inset-0 bg-black-900/60"></div> -->
   </div>
 
@@ -35,30 +35,30 @@
           Premium car makeover services with expert craftsmanship, precision detailing, and cutting-edge protection
           techniques for automotive enthusiasts.
         </p>
-        <div class="flex flex-wrap gap-6 pt-4">
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
           <a href="#"
-            class="px-10 py-4 bg-primary hover:bg-primary-hover text-black font-bold text-xs uppercase tracking-widest rounded transition-all duration-300">
+            class="px-10 py-4 bg-primary hover:bg-primary-hover text-black font-bold text-xs uppercase tracking-widest rounded transition-all duration-300 text-center">
             Book Your Session
           </a>
           <a href="#"
-            class="px-10 py-4 border border-white/20 hover:border-white text-white font-bold text-xs uppercase tracking-widest rounded transition-all duration-300">
+            class="px-10 py-4 border border-white/20 hover:border-white text-white font-bold text-xs uppercase tracking-widest rounded transition-all duration-300 text-center">
             View Portfolio
           </a>
         </div>
       </div>
 
-      <!-- Right Visual -->
       <div class="relative hidden lg:flex justify-center lg:justify-end">
         <div class="relative z-10 rounded-3xl overflow-hidden border-4 border-black/40 shadow-2xl max-w-xl">
-          <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=2000&auto=format&fit=crop"
-            alt="Premium Car" class="w-full h-auto" loading="lazy" width="800" height="600">
+          <img
+            src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=800&auto=format,compress&fit=crop"
+            alt="Premium Car" class="w-full h-auto" width="600" height="400" loading="lazy">
         </div>
       </div>
     </div>
 
     <!-- Stats Block Overlay -->
     <div
-      class="mt-24 bg-[#191919] bg-opacity-order border-white/5 rounded-2xl grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/5 py-12 px-8 lg:px-16 shadow-2xl">
+      class="mt-24 bg-[#191919] border-white/5 rounded-2xl grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/5 py-12 px-8 lg:px-16 shadow-2xl min-h-[200px]">
       <div
         class="flex flex-col items-center justify-center space-y-4 px-4 text-center border-b lg:border-b-0 border-white/5 py-8 lg:py-0">
         <div class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary">
@@ -129,6 +129,13 @@
 </section>
 
 <style>
+  /* Mobile Hero Background Visibility */
+  @media (max-width: 991px) {
+    .hero-bg-img {
+      opacity: 0.5 !important;
+    }
+  }
+
   .brand-section {
     background: #000;
     padding: 60px 0 30px;
@@ -167,6 +174,7 @@
     gap: 80px !important;
     width: 100% !important;
     justify-content: space-between !important;
+    will-change: transform;
   }
 
   .brand-item {
@@ -315,6 +323,7 @@
     </div>
   </div>
 </section>
+</section>
 
 <!-- Gallery / Projects Section -->
 <section id="gallery-section" style="background:#000;padding:100px 0 60px;">
@@ -344,31 +353,31 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
 
       <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;">
-        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=800&auto=format&fit=crop"
+        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=400&auto=format,compress&fit=crop"
           alt="Lamborghini Huracan" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;"
-          loading="lazy" width="800" height="600" onmouseover="this.style.transform='scale(1.06)'"
-          onmouseout="this.style.transform='scale(1)'">
+          onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" width="400"
+          height="300" loading="lazy">
       </div>
 
       <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;">
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop"
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=400&auto=format,compress&fit=crop"
           alt="Mercedes G-Wagon" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;"
-          loading="lazy" width="800" height="600" onmouseover="this.style.transform='scale(1.06)'"
-          onmouseout="this.style.transform='scale(1)'">
+          onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" width="400"
+          height="300" loading="lazy">
       </div>
 
       <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;">
-        <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=800&auto=format&fit=crop"
+        <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=400&auto=format,compress&fit=crop"
           alt="Porsche 911 GT3" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;"
-          loading="lazy" width="800" height="600" onmouseover="this.style.transform='scale(1.06)'"
-          onmouseout="this.style.transform='scale(1)'">
+          onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" width="400"
+          height="300" loading="lazy">
       </div>
 
       <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;">
-        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop"
-          alt="Ferrari" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;" loading="lazy"
-          width="800" height="600" onmouseover="this.style.transform='scale(1.06)'"
-          onmouseout="this.style.transform='scale(1)'">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=400&auto=format,compress&fit=crop"
+          alt="Ferrari" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s;"
+          onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" width="400"
+          height="300" loading="lazy">
       </div>
 
     </div>
@@ -399,7 +408,7 @@
     </div>
 
     <!-- Slider Container -->
-    <div class="swiper testimonials-swiper" style="padding-bottom: 60px;">
+    <div class="swiper testimonials-swiper" style="padding-bottom: 60px; min-height: 480px;">
       <div class="swiper-wrapper">
 
         <!-- Slide 1 -->
@@ -416,8 +425,7 @@
               piece of art. Absolutely worth every penny."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=12" alt="Julian Sterling"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
-                height="52">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -445,8 +453,7 @@
               different vehicle types in record time."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=47" alt="Sarah Chen"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
-                height="52">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -473,8 +480,7 @@
               conditions. Top-tier engineering."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=33" alt="Marco Rossi"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
-                height="52">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -501,8 +507,7 @@
               challenging road conditions."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=65" alt="Elena Visser"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
-                height="52">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -529,8 +534,7 @@
               Highly professional and skilled team."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=44" alt="Sophia Laurent"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
-                height="52">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -557,8 +561,7 @@
               GT is simply flawless."</p>
             <div style="display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:12px;">
               <img src="https://i.pravatar.cc/100?img=11" alt="David Miller"
-                style="width:52px;height:52px;border-radius:50%;object-fit:cover;" loading="lazy" width="52"
-                height="52">
+                style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
               <div>
                 <div
                   style="color:#fff;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;">
@@ -676,10 +679,9 @@
           <span
             style="position:absolute;top:14px;left:14px;z-index:2;background:rgba(0,0,0,0.7);color:#fff;font-family:'Manrope',sans-serif;font-size:11px;font-weight:600;padding:4px 12px;border-radius:999px;letter-spacing:1px;">Expert
             Tips</span>
-          <img src="https://images.unsplash.com/photo-1598084991519-c90d6350e933?q=80&w=800&auto=format&fit=crop"
-            alt="Ceramic Coating" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
-            loading="lazy" width="800" height="500" onmouseover="this.style.transform='scale(1.05)'"
-            onmouseout="this.style.transform='scale(1)'">
+          <img src="https://i.pinimg.com/1200x/1a/cb/72/1acb72690f54bb4afb3542556fbdd94e.jpg" alt="Ceramic Coating"
+            style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+            onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div style="padding:24px 24px 28px;">
           <div
@@ -702,10 +704,10 @@
         <div style="position:relative;aspect-ratio:16/10;overflow:hidden;">
           <span
             style="position:absolute;top:14px;left:14px;z-index:2;background:rgba(0,0,0,0.7);color:#fff;font-family:'Manrope',sans-serif;font-size:11px;font-weight:600;padding:4px 12px;border-radius:999px;letter-spacing:1px;">Trends</span>
-          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop"
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=400&auto=format,compress&fit=crop"
             alt="Vinyl Wrap Trends" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
-            loading="lazy" width="800" height="500" onmouseover="this.style.transform='scale(1.05)'"
-            onmouseout="this.style.transform='scale(1)'">
+            onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" width="400"
+            height="250" loading="lazy">
         </div>
         <div style="padding:24px 24px 28px;">
           <div
@@ -728,10 +730,9 @@
         <div style="position:relative;aspect-ratio:16/10;overflow:hidden;">
           <span
             style="position:absolute;top:14px;left:14px;z-index:2;background:rgba(0,0,0,0.7);color:#fff;font-family:'Manrope',sans-serif;font-size:11px;font-weight:600;padding:4px 12px;border-radius:999px;letter-spacing:1px;">Guides</span>
-          <img src="https://images.unsplash.com/photo-1621259182978-f09e5e2ca845?q=80&w=800&auto=format&fit=crop"
-            alt="Custom Interior" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
-            loading="lazy" width="800" height="500" onmouseover="this.style.transform='scale(1.05)'"
-            onmouseout="this.style.transform='scale(1)'">
+          <img src="https://i.pinimg.com/736x/9c/7e/a7/9c7ea710a74c13b5664eb8970c190af0.jpg" alt="Custom Interior"
+            style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+            onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div style="padding:24px 24px 28px;">
           <div
